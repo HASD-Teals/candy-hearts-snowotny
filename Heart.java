@@ -1,6 +1,7 @@
 public class Heart {
     // PROPERTIES
     private String color;
+    private int size;
     private String sayings;
     private int calories;
     private double costPerpound;
@@ -9,6 +10,7 @@ public class Heart {
 
     // CONSTRUCTORS
     public Heart() {
+        this.size = 0;
         this.color = "";
         this.sayings = "";
         this.calories = 0;
@@ -17,7 +19,8 @@ public class Heart {
         this.stock = 0;
     } // This is the default contructor
     //Add overloaded Constructor here...
-    public Heart(String color, String sayings, int calories, double costPerpound, boolean availibility, int stock){
+    public Heart(int size, String color, String sayings, int calories, double costPerpound, boolean availibility, int stock){
+        this.size = size;
         this.color = color;
         this.sayings = sayings;
         this.calories = calories;
@@ -27,6 +30,9 @@ public class Heart {
     }
 
     // ACCESSORS
+    public int getSize(){
+        return this.size;
+    }
     public String getColor() {
         return this.color;
     }
@@ -49,6 +55,9 @@ public class Heart {
 
 
     // MUTATORS
+    public void setSize(int size){
+        this.size = size;
+    }
     public void setColor(String color) {
         this.color = color;
     }

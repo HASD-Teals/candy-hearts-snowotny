@@ -7,26 +7,26 @@ public class Heart {
     private double costPerpound;
     private boolean availibility;
     private int stock;
-
     // CONSTRUCTORS
     public Heart() {
         this.size = 0;
         this.color = "";
         this.sayings = "";
         this.calories = 0;
-        this.costPerpound = 0.0;
+        this.costPerpound = 0.00;
         this.availibility = false;
         this.stock = 0;
     } // This is the default contructor
     //Add overloaded Constructor here...
-    public Heart(int size, String color, String sayings, int calories, double costPerpound, boolean availibility, int stock){
+    public Heart(int size, String color, String sayings, double costPerpound, boolean availibility, int stock){
         this.size = size;
         this.color = color;
         this.sayings = sayings;
-        this.calories = calories;
         this.costPerpound = costPerpound;
-        this.availibility = availibility;
         this.stock = stock;
+        if(this.stock>0){
+            this.availibility=true;
+        }
     }
 
     // ACCESSORS
@@ -76,17 +76,19 @@ public class Heart {
     public void setStock(int stock){
         this.stock = stock;
     }
+    public String getReport(){
+        String report="color: " + this.color + "\n" + "size: " + this.size + "\n" + "saying: " + this.sayings + "\n" + "calories: " + this.calories + "\n" + "cost: " + this.costPerpound + "\n" + "availibility: " + this.availibility + "\n" + "stock: " + this.stock;
+        return report;
+    }
+    public void adjustPrice(double percentage){
+        this.cost = this.cost + (this.price*percentage/100);
+    }
+    public void inStock(int stock){
+        this.stock = stock;
+        if(this.stock>0){
+            this.availibility = true;
+        }
+    }
     //Add remaining Mutator methods here...
-
-
-    // METHODS
-    /*public String report() {
-        return this.color + "\n"; // Add other properties here as you add them to the class
-        return this.sayings + "\n";
-        return this.calories + "\n";
-        return this.costPerpound + "\n";
-        return this.availibility + "\n";
-        return this.stock + "\n";
-    }*/
     //Write other methods here (if needed)...
 }

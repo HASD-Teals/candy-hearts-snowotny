@@ -1,44 +1,31 @@
 public class HeartsClient {
     public static void main(String[] args) throws Exception {
-        /*Heart newHeart = new Heart();
-        newHeart.setAvailibility(true);
-        newHeart.setColor("blue");
-        newHeart.setCalories(0);
-        newHeart.setSayings("Hello");
-        newHeart.setCostperPound(4.75);
-        newHeart.setStock(20);
-        System.out.println("The heart is the color: " + newHeart.getColor());
-        System.out.println("The heart is availible: " + newHeart.getavailibility());
-        System.out.println("The heart has this many calories: " + newHeart.getCalories());
-        System.out.println("The heart says this: " + newHeart.getSayings());
-        System.out.println("The heart costs this much per pound: $" + newHeart.getCostPerPound());
-        System.out.println("The hearts have this much in stock: " + newHeart.getStock());
-    */
-    Heart Group1 = new Heart();
-    Heart Group2 = new Heart();
-    Heart Group3 = new Heart();
-        Group1.setAvailibility(true);
-        Group1.setColor("red");
-        Group1.setSize(3);
-        Group1.setSayings("Hi");
-        Group1.setCostperPound(5.00);
-        Group1.setStock(50);
-        Group2.setAvailibility(true);
-        Group2.setColor("teal");
-        Group2.setSize(5);
-        Group2.setCostperPound(4.50);
-        Group2.setSayings("Love CS-A");
-        Group2.setStock(200);
-        Group3.setAvailibility(true);
-        Group3.setColor("green");
-        Group3.setSize(2);
-        Group3.setSayings("Go Girl!");
-        Group3.setCostperPound(3.50);
-        Group3.setStock(75);
-        System.out.println("color: " + Group1.getColor());
-        System.out.println("size: " + Group1.getSize());
-        System.out.println("saying: " + Group1.getSayings());
-        System.out.println("cost: " + Group1.getCostPerPound());
-        System.out.println("stock: " + Group1.getStock());
+    Heart Group1 = new Heart("red",3,5.00,50);
+    Heart Group2 = new Heart("teal",5,"Love CSA",4.50,200);
+    Heart Group3 = new Heart("green",2,"Go Girl!",3.50,75);
+    System.out.println(Group1.getReport());
+
+    Heart [] store = newHearts[3];
+    Store [0] = Group1;
+    Store [1] = Group2;
+    Store [2] = Group3;
+    System.out.println(buyOut(store));
+    }
+    public static int buyOut(Heart [] store){
+        int total = 0;
+        for(int i=0; i<store.length; i++){
+            total = total + store[i].getStock;
+        }
+        return total;
+    }
+    public static int adjStock(Heart availibility, Heart total){
+        int newStock = total;
+        for(int i=0;i<total;i++){
+
+        }
+        return 0;
+    }
+    public static String order(Heart color, Heart costPerpound, Heart Stock){
+    return 0;
     }
 }

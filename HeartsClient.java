@@ -11,7 +11,7 @@ public class HeartsClient {
     Store [2] = Group3;
     System.out.println(buyOut(store));
     }
-    public static int buyOut(Heart [] store){
+    public static int buyOut(Heart [] Store){
         int total = 0;
         for(int i=0; i<store.length; i++){
             total = total + store[i].getStock;
@@ -20,7 +20,7 @@ public class HeartsClient {
     }
     public static int adjStock(Heart availibility, Heart total){
         int newStock = total;
-        for(int i=0;i<total;i++){
+        for(int i=0;i<total.length;i++){
 
         }
         return 0;
